@@ -7,11 +7,11 @@ Router.get('/', (req, res) => {
 });
 
 Router.get('/:id', (req, res) => {
-
+    UsuariosController.getUserById(req, res)
 })
 
 Router.post('/', (req, res) => {
-
+    UsuariosController.postNewUser(req, res)
 })
 
 module.exports = Router;
