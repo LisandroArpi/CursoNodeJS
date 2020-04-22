@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express()
 const usuarioRouter = require('./router/usuariosRouter');
+const helmet = require("helmet");
 
 app.use(express.json());
+app.use(helmet());
 
 /*Middleware: intermedia en una comunicacion
   Router: quien redirige la consulta*/
