@@ -28,8 +28,6 @@ class UsuariosController {
                 id: id
             })
         }
-
-        
     }
 
     static postNewUser(req, res) {
