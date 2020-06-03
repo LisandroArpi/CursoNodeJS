@@ -1,3 +1,5 @@
+const axios = require("axios");
+const fetch = require("node-fetch");
 class UsuariosController {
     /**
      * attribute: una variable de una clase.
@@ -35,6 +37,14 @@ class UsuariosController {
         res.json({
             nombre: "clase nodejs",
             titulo: "primera clase"
+        })
+    }
+
+    static async getUserByWeb(req, res) {
+        const users = await axios.get("https://jsonplaceholder.typicode.com/users");
+        console.log("users: ", users.data);
+        res.json({
+            users: users.data
         })
     }
 

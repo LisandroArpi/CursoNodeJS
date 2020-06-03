@@ -4,7 +4,7 @@ const UsuariosController = require("../controllers/UsuariosController");
 const validateRequest = require("../middlewares/validationMiddleware");
 
 Router.get('/', (req, res) => {
-    UsuariosController.getUser(req, res)
+    UsuariosController.getUserByWeb(req, res);
 });
 
 Router.get('/:id', (req, res) => {

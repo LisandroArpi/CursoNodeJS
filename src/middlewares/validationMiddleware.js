@@ -11,9 +11,9 @@ const schemaBody = Joi.object({
     año: Joi.number().integer().min(1900).max(2020).required()
 });
 
-const schemaHeader = Joi.object();
+const schemaHeader = Joi.object({});
 
-const schemaParams = Joi.object();
+const schemaParams = Joi.object({});
 
 async function validateRequest(req, res, next) {
     try {
